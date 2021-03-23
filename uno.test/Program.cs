@@ -38,7 +38,7 @@ namespace uno.test
 
         override protected void Draw(GameTime gameTime)
         {
-            Console.WriteLine("time: {0}/{1}", gameTime.TotalGameTime, gameTime.ElapsedGameTime);
+            //Console.WriteLine("time: {0}/{1}", gameTime.TotalGameTime, gameTime.ElapsedGameTime);
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             base.Draw(gameTime);

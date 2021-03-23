@@ -20,7 +20,7 @@
     <!--  <WasmShellExtraEmccFlags Include="-v -s MAX_WEBGL_VERSION=2 -s USE_SDL=2  -s ERROR_ON_UNDEFINED_SYMBOLS=0 -s &quot;EXPORTED_FUNCTIONS=['_SDL_uclibc_exp']&quot; " /> -->
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WasmShellMonoEnvironment Include="MONO_GC_PARAMS" Value="soft-heap-limit=512m,nursery-size=64m,evacuation-threshold=66,major=marksweep" />
     <WasmShellMonoEnvironment Include="MONO_LOG_LEVEL" Value="debug" />
     <WasmShellMonoEnvironment Include="MONO_LOG_MASK" Value="all" />
