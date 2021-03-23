@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "uno.test", "uno.test.csproj", "{9471DFDC-C4CD-47AB-973A-F227AB9B07F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "uno.test", "src\uno.test.csproj", "{9471DFDC-C4CD-47AB-973A-F227AB9B07F3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FNA.Core", "..\external\FNA\FNA.Core.csproj", "{37D1A297-4BC9-447A-9B03-CA1985B07F36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FNA.Core", "external\FNA\FNA.Core.csproj", "{37D1A297-4BC9-447A-9B03-CA1985B07F36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
