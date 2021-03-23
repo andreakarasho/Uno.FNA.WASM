@@ -13,6 +13,8 @@
 
  <ItemGroup>
     <WasmShellExtraEmccFlags Include="-v -s MAX_WEBGL_VERSION=2" />
+    <EmbeddedResource Include="WasmScripts\*.js" />
+    <LinkerDescriptor Include="LinkerConfig.xml" />
      <!--<WasmShellExtraEmccFlags Include="-v -s MAX_WEBGL_VERSION=2 -s USE_SDL=2 -s DISABLE_DEPRECATED_FIND_EVENT_TARGET_BEHAVIOR=1" />-->
     <!-- <WasmShellExtraEmccFlags Include="-v -s MIN_WEBGL_VERSION=2 -s MAX_WEBGL_VERSION=2 -s RELOCATABLE=1" /> -->
     <!-- <WasmShellExtraEmccFlags Include="-v -s MAX_WEBGL_VERSION=2 -s &quot;&quot;EXPORTED_FUNCTIONS=['SDL_uclibc_exp']&quot;&quot;" /> -->
@@ -31,36 +33,25 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <!--<DefineConstants>$(DefineConstants);__WASM__;TRACE;DEBUG</DefineConstants> -->
-    <DefineConstants>$(DefineConstants);TRACE;DEBUG</DefineConstants>
+    <DefineConstants>$(DefineConstants);__WASM__;TRACE;DEBUG</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PlatformTarget>x64</PlatformTarget>
+    <DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\external\FNA\FNA.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="WasmScripts\module_decl.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <LinkerDescriptor Include="LinkerConfig.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Uno.Wasm.Bootstrap" Version="2.0.0-dev.180" />
     <PackageReference Include="Uno.Wasm.Bootstrap.DevServer" Version="2.0.0-dev.180" PrivateAssets="all" />
   </ItemGroup>
-
 
   <ItemGroup>
     <Content Include="../external/libs/libmojoshader.a" />
     <Content Include="../external/libs/FNA3D.a" />
     <Content Include="../external/libs/SDL2.a" />
   </ItemGroup>
+
 </Project>
