@@ -59,8 +59,8 @@
 
 
   <ItemGroup>
-    <Content Include="libmojoshader.a" />
-    <Content Include="FNA3D.a" />
-    <Content Include="SDL2.a" />
+    <Content Include="../external/libs/libmojoshader.a" />
+    <Content Include="../external/libs/FNA3D.a" />
+    <Content Include="../external/libs/SDL2.a" />
   </ItemGroup>
 </Project>
