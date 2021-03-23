@@ -1,0 +1,6 @@
+<linker>
+  <assembly fullname="FNA">
+    <type fullname="ObjCRuntime.MonoPInvokeCallbackAttribute"/>
+  </assembly>
+
+</linker>
